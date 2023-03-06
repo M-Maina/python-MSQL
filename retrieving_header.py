@@ -14,3 +14,11 @@ print(desc[0][0] , desc[1][0] , desc[2][0])
 print('__________________________________')
 for i in range(cur.rowcount):
     print(row[0], row[1], row[2] , row[3] , row[4])
+    
+    
+#prepared statements
+
+cur = con.cursor()
+sql = ("SELECT FIRST_NAME , AGE FROM employee WHERE FIRST_NAME= %s")
+cur.execute(sql, ('Amal', ))
+ 
